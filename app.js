@@ -158,11 +158,7 @@ app.get("/work", function (req, res) {
     });
 })
 
-let port = process.env.PORT;
-if (port == null || port == ""){
-    port =3000;
-}
 
-app.listen(port, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server started at port 3000")
 })
